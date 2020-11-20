@@ -1,0 +1,162 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="auto">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>phpLDAPadmin (1.2.3) - </title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link type="text/css" rel="stylesheet" href="css/default/style.css">
+    <link type="text/css" rel="stylesheet" media="all" href="js/jscalendar/calendar-blue.css" title="blue">
+    <script type="text/javascript" src="js/ajax_functions.js"></script>
+    <script type="text/javascript" src="js/jscalendar/calendar.js"></script>
+</head>
+<body>
+<table class="page" border="0" width="100%">
+    <tbody>
+    <tr class="pagehead">
+        <td colspan="3">
+            <div id="ajHEAD">
+                <table width="100%" border="0">
+                    <tbody>
+                    <tr>
+                        <td style="text-align: left;"><a href="https://sourceforge.net/projects/phpldapadmin"
+                                                         onclick="target='_blank';" target="_blank"><img
+                                src="images/default/logo-small.png" alt="Logo" class="logo"></a></td>
+                        <td class="imagetop"><a
+                                href="https://sourceforge.net/mailarchive/forum.php?forum_name=phpldapadmin-users"
+                                title="Forum" onclick="target='_blank';"><img src="images/default/forum-big.png"
+                                                                              alt="Forum"></a> <a
+                                href="https://sourceforge.net/tracker/?func=add&amp;group_id=61828&amp;atid=498549"
+                                title="功能需求" onclick="target='_blank';"><img
+                                src="images/default/request-feature-big.png" alt="功能需求"></a> <a
+                                href="https://sourceforge.net/tracker/?func=add&amp;group_id=61828&amp;atid=498546"
+                                title="报告错漏" onclick="target='_blank';"><img src="images/default/bug-big.png"
+                                                                             alt="报告错漏"></a> <a
+                                href="https://sourceforge.net/donate/index.php?group_id=61828" title="捐赠"
+                                onclick="target='_blank';"><img src="images/default/smile-big.png" alt="捐赠"></a> <a
+                                href="http://phpldapadmin.sourceforge.net/Documentation" title="帮助"
+                                onclick="target='_blank';"><img src="images/default/help-big.png" alt="帮助"></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="control">
+        <td colspan="3">
+            <div id="ajCONTROL">
+                <table class="control" width="100%" border="0">
+                    <tbody>
+                    <tr>
+                        <td><a href="index.php" title="主页">主页</a> | <a href="cmd.php?cmd=purge_cache"
+                                                                       onclick="return ajDISPLAY('BODY','cmd=purge_cache','Clearing cache');"
+                                                                       title="清空缓存">清空缓存</a> | <a
+                                href="cmd.php?cmd=show_cache"
+                                onclick="return ajDISPLAY('BODY','cmd=show_cache','Loading');" title="Show Cache">Show
+                            Cache</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="tree" colspan="2"><acronym title="Hide/Unhide the tree"><img src="images/default/plus.png" alt=""
+                                                                                style="float: right;"
+                                                                                onclick="if (document.getElementById('ajTREE').style.display == 'none') { document.getElementById('ajTREE').style.display = 'block' } else { document.getElementById('ajTREE').style.display = 'none' };"></acronym>
+            <div id="ajTREE">
+                <div id="ajSID_1" style="display: block">
+                    <table class="tree" border="0">
+                        <tbody>
+                        <tr class="server">
+                            <td class="icon"><img src="images/default/server.png" alt="服务器"></td>
+                            <td class="name" colspan="2">Wanyu LDAP Server</td>
+                        </tr>
+                        <tr class="option">
+                            <td class="spacer"></td>
+                            <td class="icon"><a href="cmd.php?cmd=login_form&amp;server_id=1"
+                                                onclick="return ajDISPLAY('BODY','cmd=login_form&amp;server_id=1','Loading Login');"
+                                                title="Login to Wanyu LDAP Server"><img src="images/default/login.png"
+                                                                                        alt="登录"></a></td>
+                            <td class="logged_in" colspan="1"><a href="cmd.php?cmd=login_form&amp;server_id=1"
+                                                                 onclick="return ajDISPLAY('BODY','cmd=login_form&amp;server_id=1','Loading Login');"
+                                                                 title="Login to Wanyu LDAP Server">登录</a></td>
+                        </tr>
+                        <tr>
+                            <td class="blank" colspan="3">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="blank" colspan="3">&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <script type="text/javascript" src="js/layersmenu-browser_detection.js"></script>
+                    <script type="text/javascript" src="js/ajax_tree.js"></script>
+                </div>
+
+            </div>
+        </td>
+        <td class="body" style="width: 80%;">
+            <div id="ajBODY">
+                <table class="body">
+                    <tbody>
+                    <tr>
+                        <td><h3 class="title">Authenticate to server Wanyu LDAP Server</h3><br>
+                            <div style="text-align: center; color:red"><acronym
+                                    title="你没有使用'https'。 Web浏览器将会以明文传输登录信息。"><b>警告: This web connection is
+                                unencrypted.</b></acronym></div>
+                            <br>
+                            <form action="cmd.php" method="post">
+                                <div><input type="hidden" name="cmd" value="login"><input type="hidden" name="server_id"
+                                                                                          value="1"><input type="hidden"
+                                                                                                           name="nodecode[login_pass]"
+                                                                                                           value="1">
+                                </div>
+                                <table class="forminput" style="margin-left: auto; margin-right: auto;">
+                                    <tbody>
+                                    <tr>
+                                        <td><b>登录DN:</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" id="login" name="login" size="40" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>密码:</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="password" id="password" size="40" value="" name="login_pass">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align: center;"><input type="submit" name="submit"
+                                                                                           value="认证"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <br>
+                            <script type="text/javascript">document.getElementById("login").focus()</script>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="foot">
+        <td><small>&nbsp;</small></td>
+        <td colspan="2">
+            <div id="ajFOOT">1.2.3</div>
+            <a href="https://sourceforge.net/projects/phpldapadmin"><img
+                    src="http://sflogo.sourceforge.net/sflogo.php?group_id=61828&amp;type=10" alt="SourceForge.net Logo"
+                    style="border: 0px;"></a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
